@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StoryBox Story</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #101827;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-bar {
+            padding: 15px 20px;
+            background: #182338;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-button {
+            border: none;
+            background: white;
+            color: #182338;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .story-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .story-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .story-picture {
+            width: min(800px, 90vw);
+            height: min(450px, 55vw);
+            background: linear-gradient(135deg, #78d6ff, #ffe49b);
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 120px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+            margin-bottom: 30px;
+        }
+
+        .story-text {
+            max-width: 800px;
+        }
+
+        .story-text h1 {
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .story-text p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #d8deea;
+        }
+
+        .controls {
+            padding: 20px;
+            background: #182338;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .control-button {
+            border: none;
+            padding: 13px 22px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .control-button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+
+            .story-picture {
+                height: 250px;
+                font-size: 80px;
+            }
+
+            .story-text h1 {
+                font-size: 27px;
+            }
+
+            .story-text p {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top-bar">
+
+        <button class="back-button" onclick="goHome()">
+            ← Back
+        </button>
+
+        <div class="story-title">
+            📦 StoryBox
+        </div>
+
+    </div>
+
+    <main class="story-area">
+
+        <div class="story-picture">
+            🦊
+        </div>
+
+        <div class="story-text">
+
+            <h1>The Little Fox</h1>
+
+            <p>
+                Once upon a time, a little fox went exploring
+                through a magical forest...
+            </p>
+
+        </div>
+
+    </main>
+
+    <div class="controls">
+
+        <button class="control-button" onclick="previousPage()">
+            ◀ Previous
+        </button>
+
+        <button class="control-button" onclick="nextPage()">
+            Next ▶
+        </button>
+
+    </div>
+
+    <script>
+
+        function goHome() {
+            window.location.href = "index.html";
+        }
+
+        function previousPage() {
+            alert("This is the first page!");
+        }
+
+        function nextPage() {
+            alert("The next page will be added soon! 📖");
+        }
+
+    </script>
+
+</body>
+</html>
